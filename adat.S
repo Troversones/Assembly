@@ -2,7 +2,7 @@
 
 .data
 
-TXT: .asciz "-> edx: %d eax: %d\n" 
+TXT: .asciz "-> %d %d\n" 
 
 ADAT: .int 100, 10, 51, 25, -25 // integer adat deklaráció
 
@@ -12,12 +12,12 @@ main:
 	push ebp
 	mov ebp, esp
 	
-	//szorzás
-	mov edx, 12312
+	mov edx, 100
 	mov eax, 3
-	mov ecx, 8
+	//mov ecx, 8
 	
-	mul ecx
+	//szorzás
+	//mul ecx
 	//imul eax, ecx, 4 // eax := ecx * 4
 	//szorzás
 	
@@ -42,6 +42,27 @@ main:
 	//mov dword ptr [ADAT + 1*4], 2 //dword(vagy byte) ptr egy 4 bites pointer az integer 2-re
 	//mov eax, [ADAT + 1*4]
 	//pointerek
+	
+	//osztás
+	//mov edx, 0
+	//div ecx 	//edx: eax / ecx -> eax
+	//cdq
+	//idiv ecx
+	//osztás
+	
+	//extra feladat
+	//mov ecx, eax 		//átmásoljuk az ecx-et az eax-ba
+	//mov eax, edx		// eax := edx
+	//cdq
+	//idiv ecx
+	//imul eax ,ecx
+	//extra feladat
+	
+	//jmp utasítás
+	//jmp ide
+	//valami utasítás (amit kihagy)
+	//ide:
+	//jmp utasítás
 	
 	push eax
 	push edx
