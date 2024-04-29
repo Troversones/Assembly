@@ -70,7 +70,10 @@ main:
    	
 	ldr r0, =DATA
 	mov r1, 4
-	//mov r1, 42
+	bl sum
+	mov r1, r0
+
+	ldr r0, =TXT
 	bl printf
 	
 	pop {r4-r11, pc}
