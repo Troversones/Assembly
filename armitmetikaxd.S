@@ -68,7 +68,7 @@ main:
    end:
    	*/
    	
-	ldr r0, =TXT
+	ldr r0, =DATA
 	mov r1, 4
 	//mov r1, 42
 	bl printf
